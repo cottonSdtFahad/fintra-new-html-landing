@@ -201,9 +201,44 @@
   letter-spacing: 0;
 }
 .hero-sub-text {
-  font-family: "GeneralSans-Light", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 300;
   letter-spacing: 0;
+  font-family: "GeneralSans-Light", sans-serif;
+  line-height: 100%;
+}
+
+/* contact us */
+.contact-us-section-title {
+  font-family: "GeneralSans-Semibold", sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 52.5px;
+  letter-spacing: 0;
+}
+/* Gradient border effect */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(183, 255, 100, 0.3) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(183, 255, 100, 0.3) 100%
+  );
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
 }
 
 /* Responsive typography */
@@ -222,6 +257,10 @@
     font-size: 14px;
     line-height: 20px;
   }
+  .contact-us-section-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 768px) {
@@ -238,6 +277,10 @@
   .hero-sub-text {
     font-size: 16px;
     line-height: 24px;
+  }
+  .contact-us-section-title {
+    font-size: 28px;
+    line-height: 42px;
   }
 }
 
@@ -256,6 +299,10 @@
     font-size: 18px;
     line-height: 27px;
   }
+  .contact-us-section-title {
+    font-size: 32px;
+    line-height: 48px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -270,8 +317,16 @@
   }
 
   .hero-sub-text {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    /* letter-spacing: 0; */
+    font-family: "GeneralSans-Light", sans-serif;
+    /* line-height: 100%; */
+  }
+  .contact-us-section-title {
+    font-size: 35px;
+    line-height: 52.5px;
   }
 }
 
@@ -338,7 +393,7 @@ button:hover {
 } */
 
 /* Abstract shapes animation */
-@keyframes float {
+/* @keyframes float {
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
@@ -358,7 +413,7 @@ button:hover {
 
 .abstract-shape:nth-child(3) {
   animation-delay: -4s;
-}
+} */
 
 /* Animated underline for menu items */
 .menu-link::after {
