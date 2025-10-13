@@ -137,7 +137,8 @@
         </li>
         <li>
           <a
-            href=""
+            href="#"
+            id="license-menu-link"
             class="menu-link text-black hover:text-black transition-colors relative block py-1 text-sm sm:text-base font-medium"
             >License</a
           >
@@ -526,9 +527,11 @@
 
         <div class="flex flex-col lg:flex-row h-full">
           <!-- Preview Section (Left) -->
-          <div class="lg:w-2/3 p-6 flex items-center justify-center bg-transparent">
+          <div
+            class="lg:w-2/3 p-6 flex items-center justify-center bg-transparent"
+          >
             <div
-              class="relative w-full h-full  flex items-center justify-center"
+              class="relative w-full h-full flex items-center justify-center"
             >
               <!-- Certificate 1 (Active by default) -->
               <img
@@ -550,19 +553,17 @@
 
           <!-- Thumbnail Section (Right) -->
           <div class="lg:w-1/3 p-6 bg-transparent border-0 mt-10">
-            
             <div class="space-y-4">
               <!-- Certificate 1 Thumbnail -->
               <div
                 id="thumb-1"
-                class="certificate-thumbnail cursor-pointer border-0  rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg"
+                class="certificate-thumbnail cursor-pointer border-0 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg"
               >
                 <img
                   src="images/trdright.png"
                   alt="Trading Right Certificate"
                   class="w-auto h-32 object-cover"
                 />
-                
               </div>
 
               <!-- Certificate 2 Thumbnail -->
@@ -575,7 +576,6 @@
                   alt="Certificate"
                   class="w-auto h-32 object-cover"
                 />
-                
               </div>
             </div>
           </div>
@@ -686,6 +686,7 @@
       const viewCertificateBtn = document.getElementById(
         "view-certificate-btn"
       );
+      const licenseMenuLink = document.getElementById("license-menu-link");
       const certificateModal = document.getElementById("certificate-modal");
       const closeModal = document.getElementById("close-modal");
       const certificate1 = document.getElementById("certificate-1");
@@ -695,13 +696,35 @@
 
       let currentCertificate = 1;
 
-      // Open modal
-      viewCertificateBtn.addEventListener("click", () => {
+      // Function to open modal
+      function openCertificateModal() {
         certificateModal.classList.remove("opacity-0", "pointer-events-none");
         certificateModal.classList.add("opacity-100", "pointer-events-auto");
         certificateModal.querySelector("div").classList.remove("scale-95");
         certificateModal.querySelector("div").classList.add("scale-100");
         document.body.style.overflow = "hidden";
+
+        // Close dropdown menu if open
+        if (isMenuOpen) {
+          dropdownMenu.classList.remove("translate-y-0", "opacity-100");
+          dropdownMenu.classList.add("-translate-y-4", "opacity-0");
+          hamburgerMenu.innerHTML = `
+                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="31" viewBox="0 0 38 31" fill="none">
+                    <line x1="1.5" y1="9.5" x2="36.5" y2="9.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="1.5" y1="19.5" x2="36.5" y2="19.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                `;
+          isMenuOpen = false;
+        }
+      }
+
+      // Open modal from View Certificate button
+      viewCertificateBtn.addEventListener("click", openCertificateModal);
+
+      // Open modal from License menu link
+      licenseMenuLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        openCertificateModal();
       });
 
       // Close modal
