@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        /* colors */
+        --color-light-green: #b7ff64;
+        --color-dark-teal: #1a363a;
+        --color-light-teal: #2c6e7e;
+        --color-dark-grey: #2d3748;
+        --color-light-grey: #f7fafc;
+        --color-gray-thin: #eaebf433;
+
+        /* fonts */
+        --font-general-sans: "GeneralSans-Variable", "GeneralSans-Regular",
+          sans-serif;
+      }
+    </style>
+    <title>Fintra Securities</title>
+  </head>
+  <body class="font-general-sans bg-dark-teal text-white overflow-hidden">
+    <!-- Header -->
+    <header
+      class="fixed top-12 left-0 right-0 mx-auto w-[calc(90%-40px)] z-50 bg-gray-thin/20 border border-white/30 backdrop-blur-sm rounded-[10px]"
+    >
+      <div class="flex items-center justify-between px-2.5 py-2.5">
+        <!-- Hamburger Menu Button -->
+        <button
+          id="hamburger-menu"
+          class="text-white text-xl hover:text-light-green transition-colors cursor-pointer ml-2"
+        >
+          <!-- Hamburger code -->
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="38"
+            height="31"
+            viewBox="0 0 38 31"
+            fill="none"
+          >
+            <line
+              x1="1.5"
+              y1="9.5"
+              x2="36.5"
+              y2="9.5"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <line
+              x1="1.5"
+              y1="19.5"
+              x2="36.5"
+              y2="19.5"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img
+            src="images/Logo.png"
+            alt="Fintra Securities"
+            class="w-auto h-auto"
+          />
+        </div>
+
+        <!-- Login Button -->
+        <button
+          class="bg-light-green text-black px-5 py-2 rounded-[10px] font-medium hover:bg-opacity-90 transition-all flex items-center space-x-2 cursor-pointer"
+        >
+          <span class="normal-text">Login</span>
+          <!-- <i class="fa-solid fa-arrow-up-right text-black"></i> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="13"
+            viewBox="0 0 14 13"
+            fill="none"
+          >
+            <path
+              d="M2 11.5L12 1.5M12 1.5H3M12 1.5V10.5"
+              stroke="black"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Dropdown Menu -->
+    <nav
+      id="dropdown-menu"
+      class="fixed top-32 left-28 z-40 bg-light-grey rounded-lg p-4 shadow-lg transform -translate-y-4 opacity-0 transition-all duration-300 ease-in-out w-[calc(10%-10px)]"
+    >
+      <ul class="space-y-1">
+        <li>
+          <a
+            href="#"
+            class="menu-link normal-text text-black hover:text-light-teal transition-colors relative block py-1"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="menu-link normal-text text-black hover:text-light-teal transition-colors relative block py-1"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="menu-link normal-text text-black hover:text-light-teal transition-colors relative block py-1"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="relative h-screen m-3">
+      <!-- Video Background -->
+      <div
+        class="video-docker absolute top-0 left-0 w-full h-full rounded-[10px] overflow-hidden"
+      >
+        <video
+          class="min-w-full min-h-full absolute object-cover"
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+          type="video/mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+      </div>
+
+      <!-- Abstract Background Shapes -->
+      <!-- <div class="absolute inset-0 pointer-events-none">
+        Large sphere
+        <div
+          class="abstract-shape absolute top-1/2 left-1/4 transform -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-gray-400 to-dark-teal rounded-full opacity-60"
+        ></div>
+
+        Geometric shapes
+        <div
+          class="abstract-shape absolute top-20 right-20 w-24 h-24 bg-light-teal transform rotate-45 opacity-40"
+        ></div>
+        <div
+          class="abstract-shape absolute bottom-32 right-32 w-16 h-16 bg-light-teal transform rotate-12 opacity-30"
+        ></div>
+        <div
+          class="abstract-shape absolute top-1/3 right-1/4 w-20 h-20 bg-light-teal transform -rotate-12 opacity-25"
+        ></div>
+      </div> -->
+
+      <!-- Main Content -->
+      <div
+        class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6"
+      >
+        <div class="space-y-2 max-w-4xl">
+          <h1 class="hero-main-text">Invest In Your Future</h1>
+          <p class="hero-sub-text">
+            Empowering Every Investor In Bangladesh's Capital Market
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+          >
+            <button
+              class="bg-light-green text-black px-8 py-2 rounded-[10px] normal-text hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer"
+            >
+              <span>Login</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
+                fill="none"
+              >
+                <path
+                  d="M2 11.5L12 1.5M12 1.5H3M12 1.5V10.5"
+                  stroke="black"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="bg-white/10 text-white px-8 py-2 rounded-[10px] normal-text hover:bg-opacity-80 transition-all border border-gray-600 shadow-lg cursor-pointer"
+            >
+              About Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Hamburger menu toggle functionality
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+      let isMenuOpen = false;
+
+      hamburgerMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          // Fade down animation
+          dropdownMenu.classList.remove("-translate-y-4", "opacity-0");
+          dropdownMenu.classList.add("translate-y-0", "opacity-100");
+          hamburgerMenu.innerHTML = `
+                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="31" viewBox="0 0 38 31" fill="none">
+<line x1="1.5" y1="-1.5" x2="36.5" y2="-1.5" transform="matrix(0.707107 0.707107 -0.870779 0.491674 5 2.02831)" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<line x1="1.5" y1="-1.5" x2="36.5" y2="-1.5" transform="matrix(0.707107 -0.707107 0.870779 0.491674 7 28.8701)" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>
+                `;
+        } else {
+          // Fade up animation
+          dropdownMenu.classList.remove("translate-y-0", "opacity-100");
+          dropdownMenu.classList.add("-translate-y-4", "opacity-0");
+          // Set hamburger SVG icon
+          hamburgerMenu.innerHTML = `
+                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="31" viewBox="0 0 38 31" fill="none">
+                    <line x1="1.5" y1="9.5" x2="36.5" y2="9.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="1.5" y1="19.5" x2="36.5" y2="19.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                `;
+        }
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          isMenuOpen &&
+          !dropdownMenu.contains(e.target) &&
+          !hamburgerMenu.contains(e.target)
+        ) {
+          // Fade up animation
+          dropdownMenu.classList.remove("translate-y-0", "opacity-100");
+          dropdownMenu.classList.add("-translate-y-4", "opacity-0");
+          hamburgerMenu.innerHTML = '<i class="fa fa-bars"></i>';
+          isMenuOpen = false;
+        }
+      });
+    </script>
+  </body>
+</html>
