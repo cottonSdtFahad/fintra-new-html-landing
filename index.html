@@ -239,6 +239,7 @@
                     By Dhaka Stock Exchange
                   </p>
                   <button
+                    id="view-certificate-btn"
                     class="bg-white/10 text-white px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer md:w-[350px] w-auto mx-auto justify-center mt-5"
                   >
                     <span class="text-sm sm:text-base md:text-lg font-semibold"
@@ -486,6 +487,95 @@
       </div>
     </main>
 
+    <!-- Certificate Modal -->
+    <div
+      id="certificate-modal"
+      class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
+    >
+      <div
+        class="relative bg-transparent rounded-lg shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden transform scale-95 transition-all duration-300"
+      >
+        <!-- Close Button -->
+        <button
+          id="close-modal"
+          class="absolute top-4 right-4 z-10 bg-black/20 hover:bg-black/40 text-white rounded-full p-2 transition-all"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <div class="flex flex-col lg:flex-row h-full">
+          <!-- Preview Section (Left) -->
+          <div class="lg:w-2/3 p-6 flex items-center justify-center bg-transparent">
+            <div
+              class="relative w-full h-full  flex items-center justify-center"
+            >
+              <!-- Certificate 1 (Active by default) -->
+              <img
+                id="certificate-1"
+                src="images/trdright.png"
+                alt="Trading Right Certificate"
+                class="w-full h-auto max-h-full object-contain transition-all duration-500 opacity-100 transform scale-100"
+              />
+
+              <!-- Certificate 2 (Hidden by default) -->
+              <img
+                id="certificate-2"
+                src="images/crt.png"
+                alt="Certificate"
+                class="absolute top-0 left-0 w-full h-auto max-h-full object-contain transition-all duration-500 opacity-0 transform scale-95"
+              />
+            </div>
+          </div>
+
+          <!-- Thumbnail Section (Right) -->
+          <div class="lg:w-1/3 p-6 bg-transparent border-0 mt-10">
+            
+            <div class="space-y-4">
+              <!-- Certificate 1 Thumbnail -->
+              <div
+                id="thumb-1"
+                class="certificate-thumbnail cursor-pointer border-0  rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg"
+              >
+                <img
+                  src="images/trdright.png"
+                  alt="Trading Right Certificate"
+                  class="w-auto h-32 object-cover"
+                />
+                
+              </div>
+
+              <!-- Certificate 2 Thumbnail -->
+              <div
+                id="thumb-2"
+                class="certificate-thumbnail cursor-pointer border-0 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-gray-300"
+              >
+                <img
+                  src="images/crt.png"
+                  alt="Certificate"
+                  class="w-auto h-32 object-cover"
+                />
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       // Hamburger menu toggle functionality
       const hamburgerMenu = document.getElementById("hamburger-menu");
@@ -574,6 +664,110 @@
       });
 
       // Certificate rotating text animation
+      const text = document.querySelector(".text");
+      if (text) {
+        text.innerHTML = text.innerText
+          .split("")
+          .map(
+            (char, i) =>
+              `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+          )
+          .join("");
+      }
+
+      // Certificate Modal functionality
+      const viewCertificateBtn = document.getElementById(
+        "view-certificate-btn"
+      );
+      const certificateModal = document.getElementById("certificate-modal");
+      const closeModal = document.getElementById("close-modal");
+      const certificate1 = document.getElementById("certificate-1");
+      const certificate2 = document.getElementById("certificate-2");
+      const thumb1 = document.getElementById("thumb-1");
+      const thumb2 = document.getElementById("thumb-2");
+
+      let currentCertificate = 1;
+
+      // Open modal
+      viewCertificateBtn.addEventListener("click", () => {
+        certificateModal.classList.remove("opacity-0", "pointer-events-none");
+        certificateModal.classList.add("opacity-100", "pointer-events-auto");
+        certificateModal.querySelector("div").classList.remove("scale-95");
+        certificateModal.querySelector("div").classList.add("scale-100");
+        document.body.style.overflow = "hidden";
+      });
+
+      // Close modal
+      function closeCertificateModal() {
+        certificateModal.classList.remove("opacity-100", "pointer-events-auto");
+        certificateModal.classList.add("opacity-0", "pointer-events-none");
+        certificateModal.querySelector("div").classList.remove("scale-100");
+        certificateModal.querySelector("div").classList.add("scale-95");
+        document.body.style.overflow = "auto";
+      }
+
+      closeModal.addEventListener("click", closeCertificateModal);
+
+      // Close modal when clicking outside
+      certificateModal.addEventListener("click", (e) => {
+        if (e.target === certificateModal) {
+          closeCertificateModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", (e) => {
+        if (
+          e.key === "Escape" &&
+          certificateModal.classList.contains("opacity-100")
+        ) {
+          closeCertificateModal();
+        }
+      });
+
+      // Show certificate function
+      function showCertificate(certNumber) {
+        if (certNumber === 1) {
+          // Show certificate 1
+          certificate1.classList.remove("opacity-0", "scale-95");
+          certificate1.classList.add("opacity-100", "scale-100");
+          certificate2.classList.remove("opacity-100", "scale-100");
+          certificate2.classList.add("opacity-0", "scale-95");
+
+          // Update thumbnails
+          thumb1.classList.remove("border-gray-200");
+          thumb1.classList.add("border-blue-500");
+          thumb1.querySelector("div").classList.remove("bg-gray-50");
+          thumb1.querySelector("div").classList.add("bg-blue-50");
+
+          thumb2.classList.remove("border-blue-500");
+          thumb2.classList.add("border-gray-200");
+          thumb2.querySelector("div").classList.remove("bg-blue-50");
+          thumb2.querySelector("div").classList.add("bg-gray-50");
+        } else {
+          // Show certificate 2
+          certificate1.classList.remove("opacity-100", "scale-100");
+          certificate1.classList.add("opacity-0", "scale-95");
+          certificate2.classList.remove("opacity-0", "scale-95");
+          certificate2.classList.add("opacity-100", "scale-100");
+
+          // Update thumbnails
+          thumb2.classList.remove("border-gray-200");
+          thumb2.classList.add("border-blue-500");
+          thumb2.querySelector("div").classList.remove("bg-gray-50");
+          thumb2.querySelector("div").classList.add("bg-blue-50");
+
+          thumb1.classList.remove("border-blue-500");
+          thumb1.classList.add("border-gray-200");
+          thumb1.querySelector("div").classList.remove("bg-blue-50");
+          thumb1.querySelector("div").classList.add("bg-gray-50");
+        }
+        currentCertificate = certNumber;
+      }
+
+      // Thumbnail click events
+      thumb1.addEventListener("click", () => showCertificate(1));
+      thumb2.addEventListener("click", () => showCertificate(2));
     </script>
   </body>
 </html>
