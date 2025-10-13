@@ -841,6 +841,51 @@
       // Thumbnail click events
       thumb1.addEventListener("click", () => showCertificate(1));
       thumb2.addEventListener("click", () => showCertificate(2));
+
+      // Smooth scroll functionality for navigation links
+      const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+
+      smoothScrollLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetSection = document.querySelector(targetId);
+
+          if (targetSection) {
+            // Calculate offset for fixed header
+            const headerHeight = 80; // Approximate header height
+            const targetPosition = targetSection.offsetTop - headerHeight;
+
+            // Smooth scroll to target
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Smooth scroll for footer links
+      const footerLinks = document.querySelectorAll('footer a[href^="#"]');
+      footerLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetSection = document.querySelector(targetId);
+
+          if (targetSection) {
+            const headerHeight = 80;
+            const targetPosition = targetSection.offsetTop - headerHeight;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
