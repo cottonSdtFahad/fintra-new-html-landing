@@ -217,11 +217,79 @@
           <div
             class="flex flex-col md:flex-row md:items-center md: justify-between"
           >
-            <div class="w-full">
-                <div>
-                    <img src="images/aboutus.png" alt="About Us Image" class="w-full h-full object-cover">
+            <!-- certificate content -->
+
+            <!-- max-w-[435px] max-h-[485px] max-w-[calc(100vw-40%)] max-h-[calc(100vh-60%)]-->
+            <div class="w-full max-w-[435px] max-h-[485px] mb-10 md:mb-0">
+              <div class="relative rounded-xl overflow-hidden">
+                <!-- Main Image -->
+                <img
+                  src="images/aboutus.png"
+                  alt="About Us Image"
+                  class="object-cover object-center w-full h-[367px] rounded-xl"
+                />
+
+                <!-- Top Left Text -->
+                <div class="absolute top-3 left-3 text-white w-full">
+                  <p class="font-semibold">TREC #084</p>
+                  <p class="text-[16px] leading-[24px] font-light">
+                    Issued on 16th Nov 2021
+                  </p>
+                  <p class="text-[10px] leading-[15px] font-light">
+                    By Dhaka Stock Exchange
+                  </p>
+                  <button
+                    class="bg-white/10 text-white px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer md:w-[350px] w-auto mx-auto justify-center mt-5"
+                  >
+                    <span class="text-sm sm:text-base md:text-lg font-semibold"
+                      >View Certificate</span
+                    >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="11"
+                      viewBox="0 0 14 13"
+                      fill="none"
+                      class="sm:w-[14px] sm:h-[13px]"
+                    >
+                      <path
+                        d="M2 11.5L12 1.5M12 1.5H3M12 1.5V10.5"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="sm:stroke-[2.5]"
+                      />
+                    </svg>
+                  </button>
                 </div>
+
+                <!-- Rotating Circle Text (half visible) -->
+                <div
+                  class="absolute bottom-[-90px] md:bottom-[-200px] left-1/2 -translate-x-1/2 text-white"
+                >
+                  <div class="animate-spin-slow">
+                    <svg
+                      viewBox="0 0 100 100"
+                      class="w-[200px] h-[200px] md:w-[400px] md:h-[400px]"
+                    >
+                      <path
+                        id="curve"
+                        d="M 50 50 m -37 0 a 37 37 0 1 1 74 0 a 37 37 0 1 1 -74 0"
+                        fill="transparent"
+                      />
+                      <text class="text-[8px] font-[800] fill-[#FAFCFF]">
+                        <textPath xlink:href="#curve">
+                          Certified TREC Certified TREC Certified TREC Certified
+                          TREC
+                        </textPath>
+                      </text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="mx-10"></div>
             <div class="w-full">
               <button
                 class="bg-light-teal/10 text-light-green px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer w-full sm:w-auto justify-center"
@@ -504,6 +572,8 @@
           }, 1500);
         }
       });
+
+      // Certificate rotating text animation
     </script>
   </body>
 </html>

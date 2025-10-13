@@ -335,7 +335,22 @@ body {
   font-family: "GeneralSans-Variable", "GeneralSans-Regular", sans-serif;
   font-weight: 400;
 }
+ @keyframes spin-slow {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
 
+      .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+      }
+
+      text {
+        font-weight: 300;
+      }
 /* Font weight classes */
 /* .font-extralight {
   font-family: "GeneralSans-Extralight", sans-serif;
