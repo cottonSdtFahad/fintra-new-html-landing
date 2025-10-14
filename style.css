@@ -487,3 +487,10 @@ button:hover {
     top: 4rem !important;
   }
 }
+
+ #zoho-chat-container {
+      position: fixed;
+      bottom: 20px;   /* adjust distance from bottom */
+      right: 20px;    /* adjust distance from right */
+      z-index: 9999;  /* keep it above everything */
+    }
