@@ -206,7 +206,7 @@
   font-weight: 300;
   letter-spacing: 0;
   font-family: "GeneralSans-Light", sans-serif;
-  line-height: 100%;
+  line-height: 24px;
 }
 
 /* contact us */
@@ -323,6 +323,7 @@
     /* letter-spacing: 0; */
     font-family: "GeneralSans-Light", sans-serif;
     /* line-height: 100%; */
+    line-height: 24px;
   }
   .contact-us-section-title {
     font-size: 35px;
