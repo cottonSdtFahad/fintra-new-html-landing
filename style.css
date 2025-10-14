@@ -353,7 +353,6 @@ text {
   font-weight: 300;
 }
 
-
 /* Smooth transitions */
 * {
   transition: all 0.3s ease;
@@ -363,7 +362,6 @@ text {
 button:hover {
   transform: translateY(-1px);
 }
-
 
 /* Animated underline for menu items */
 .menu-link::after {
@@ -487,10 +485,3 @@ button:hover {
     top: 4rem !important;
   }
 }
-
- #zoho-chat-container {
-      position: fixed;
-      bottom: 20px;   /* adjust distance from bottom */
-      right: 20px;    /* adjust distance from right */
-      z-index: 9999;  /* keep it above everything */
-    }

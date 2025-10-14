@@ -935,9 +935,29 @@
       });
     </script>
     <!-- Zoho Chat -->
-    <div id="zoho-chat-container">
-    <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq88face176e0b2bdb5853c10ccc344dd08a6bcae888a23c3af12ed7c4baadacd5" defer></script>
-    </div>
+    <!-- <div id="zoho-chat-container"> -->
+    <script>window.$zoho=window.$zoho || {};
+      $zoho.salesiq=$zoho.salesiq||{
+      ready: function() {
+        // Wait a bit for the widget to be injected into the DOM
+        const repositionWidget = () => {
+          const widget = document.querySelector("#zsiq_float"); // Zoho's default ID
+          if (widget) {
+            // Apply your custom position
+            widget.style.bottom = "35px";
+            widget.style.right = "40px";
+            <!-- widget.style.left = "auto"; // reset left if it’s set -->
+            widget.style.position = "fixed";
+            widget.style.zIndex = "999999";
+          } else {
+            // Try again if widget isn't ready yet
+            setTimeout(repositionWidget, 500);
+          }
+        };
+        repositionWidget();
+      },
+    };</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq88face176e0b2bdb5853c10ccc344dd08a6bcae888a23c3af12ed7c4baadacd5" defer></script>
+    <!-- </div> -->
 
   </body>
 </html>
