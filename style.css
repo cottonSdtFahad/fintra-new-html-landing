@@ -396,7 +396,7 @@ button:hover {
 }
 
 /* Responsive adjustments */
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   #dropdown-menu {
     left: 3rem;
     top: 8rem;
@@ -450,7 +450,7 @@ button:hover {
     top: 9rem;
     width: calc(15% - 20px) !important;
   }
-}
+} */
 
 /* Touch-friendly interactions */
 @media (hover: none) and (pointer: coarse) {

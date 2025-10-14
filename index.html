@@ -109,10 +109,10 @@
       </div>
     </header>
 
-    <!-- Dropdown Menu -->
+    <!-- Dropdown Menu  top-20 sm:top-24 md:top-32 left-4 sm:left-6 md:left-32-->
     <nav
       id="dropdown-menu"
-      class="fixed top-20 sm:top-24 md:top-32 left-4 sm:left-6 md:left-32 z-40 bg-light-grey rounded-lg p-3 sm:p-4 shadow-lg transform -translate-y-4 opacity-0 transition-all duration-300 ease-in-out w-[calc(50%-20px)] sm:w-[calc(30%-20px)] md:w-[calc(15%-20px)]"
+      class="fixed top-24 md:top-36 left-4  md:left-[calc(8%-15px)] z-40 bg-light-grey rounded-lg p-3 sm:p-4 shadow-lg transform -translate-y-4 opacity-0 transition-all duration-300 ease-in-out w-[calc(60%-20px)] sm:w-[calc(30%-20px)] md:w-[calc(15%-20px)]"
     >
       <ul class="space-y-1 sm:space-y-2">
         <li>
@@ -194,7 +194,9 @@
               <button
                 class="bg-light-green text-black px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-[8px] sm:rounded-[10px] font-semibold text-sm sm:text-base md:text-lg hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer w-full sm:w-auto justify-center"
               >
-                <a href="https://client.fintra.com.bd/" class="flex items-center justify-center w-full space-x-2"
+                <a
+                  href="https://client.fintra.com.bd/"
+                  class="flex items-center justify-center w-full space-x-2"
                   ><span>Login</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -245,17 +247,17 @@
                 />
 
                 <!-- Top Left Text -->
-                <div class="absolute top-3 left-3 text-white w-full">
-                  <p class="font-semibold">TREC #084</p>
-                  <p class="text-[16px] leading-[24px] font-light">
+                <div class="absolute top-3 md:left-3 text-white w-full">
+                  <p class="font-semibold ml-2 md:ml-0">TREC #084</p>
+                  <p class="text-[16px] leading-[24px] font-light ml-2 md:ml-0">
                     Issued on 16th Nov 2021
                   </p>
-                  <p class="text-[10px] leading-[15px] font-light">
+                  <p class="text-[10px] leading-[15px] font-light ml-2 md:ml-0">
                     By Dhaka Stock Exchange
                   </p>
                   <button
                     id="view-certificate-btn"
-                    class="bg-white/35 text-white px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer md:w-[350px] w-auto mx-auto justify-center mt-5"
+                    class="bg-white/35 text-white px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer md:w-[350px] w-[320px] mx-auto justify-center mt-5"
                   >
                     <span class="text-sm sm:text-base md:text-lg font-semibold"
                       >View Certificate</span
@@ -282,12 +284,12 @@
 
                 <!-- Rotating Circle Text (half visible) -->
                 <div
-                  class="absolute bottom-[-90px] md:bottom-[-200px] left-1/2 -translate-x-1/2 text-white"
+                  class="absolute bottom-[-150px] md:bottom-[-200px] left-1/2 -translate-x-1/2 text-white"
                 >
                   <div class="animate-spin-slow">
                     <svg
                       viewBox="0 0 100 100"
-                      class="w-[200px] h-[200px] md:w-[400px] md:h-[400px]"
+                      class="w-[300px] h-[300px] md:w-[400px] md:h-[400px]"
                     >
                       <path
                         id="curve"
@@ -308,14 +310,30 @@
             <div class="mx-10"></div>
             <div class="w-full">
               <button
-                class="bg-light-teal/10 text-light-green px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer w-full sm:w-auto justify-center"
+                class="bg-light-teal/10 text-light-green px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer w-auto justify-center"
               >
-                License
+                About Us
               </button>
               <h2 class="contact-us-section-title mb-3 md:mb-6 mt-10 md:mt-0">
                 Your Assurance of Excellence
               </h2>
-              <p class="hero-sub-text mb-6 md:mb-10 md:w-3/5 text-justify">
+              <p class="hero-sub-text mb-6 md:mb-10 text-justify">
+                FINTRA. Securities Limited ("FINTRA.") has been operating as an
+                intermediary in Bangladesh's capital market to cater the demand
+                set out by institutions, high net worth clients, and individuals
+                since 2019. As a member of the Dhaka Stock Exchange Limited
+                (TREC No. 084), authorized by the Bangladesh Securities and
+                Exchange Commission (BSEC), FINTRA. offers a wide range of
+                brokerage services and investing solutions to enhance investor
+                confidence and trust in the Bangladeshi capital market. FINTRA.
+                is comprised of dedicated and committed knowledgeable experts
+                who ensure that stakeholders receive the highest level of
+                brokerage services possible. The company strives to offer its
+                services at a competitive rate to all clients while binding
+                trust and creating value for everyone involved through its
+                services.
+              </p>
+              <p class="hero-sub-text mb-6 md:mb-10 text-justify mt-5">
                 At FINTRA Securities, our TREC certification reinforces our
                 position as a leading brokerage firm in Bangladesh, committed to
                 democratizing access to capital markets. We take pride in being
@@ -503,7 +521,7 @@
       <!-- footer -->
       <div>
         <div
-          class="bg-light-green w-full flex justify-between item-center px-5 md:px-20 py-5"
+          class="bg-light-green w-full flex justify-between item-center px-5 md:px-24 py-5"
         >
           <div class="my-auto">
             <a href="#home-section" class="cursor-pointer">
