@@ -25,10 +25,8 @@
       }
     </style>
     <title>Fintra Securities</title>
-     
-      <link rel="icon" type="image/svg+xml" href="./images/Favicon.svg">
 
-
+    <link rel="icon" type="image/svg+xml" href="./images/Favicon.svg" />
   </head>
   <body class="font-general-sans bg-dark-teal text-white">
     <!-- w-full max-w-[1440px] mx-auto -->
@@ -78,11 +76,13 @@
 
         <!-- Logo -->
         <div class="flex items-center space-x-1 sm:space-x-2">
-          <img
-            src="images/Logo.svg"
-            alt="Fintra Securities"
-            class="h-6 sm:h-8 md:h-10 w-auto"
-          />
+          <a href="index.html">
+            <img
+              src="images/Logo.svg"
+              alt="Fintra Securities"
+              class="h-6 sm:h-8 md:h-10 w-auto"
+            />
+          </a>
         </div>
 
         <!-- Login Button  http://192.168.10.37:5173/  https://client.fintra.com.bd/login-->
@@ -90,7 +90,8 @@
           <button
             class="bg-light-green text-black px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2 rounded-[8px] sm:rounded-[10px] font-medium hover:bg-opacity-90 transition-all flex items-center space-x-1 sm:space-x-2 cursor-pointer"
           >
-            <span class="login-text text-sm sm:text-base md:text-lg font-semibold"
+            <span
+              class="login-text text-sm sm:text-base md:text-lg font-semibold"
               >Login</span
             >
             <svg
@@ -109,34 +110,35 @@
                 stroke-linejoin="round"
                 class="sm:stroke-[2.5]"
               />
-            </svg></button
-        ></a>
+            </svg>
+          </button>
+        </a>
       </div>
     </header>
 
     <!-- Dropdown Menu  top-20 sm:top-24 md:top-32 left-4 sm:left-6 md:left-32-->
     <nav
       id="dropdown-menu"
-      class="fixed top-24 md:top-36 left-4 md:left-[calc(8%-15px)] z-50 bg-light-grey rounded-lg p-3 sm:p-4 shadow-lg transform -translate-y-4 opacity-0 transition-all duration-300 ease-in-out w-[calc(60%-20px)]  md:w-[calc(16%-20px)]"
+      class="fixed top-24 md:top-36 left-4 md:left-[calc(8%-15px)] z-50 bg-light-grey rounded-lg p-3 sm:p-4 shadow-lg transform -translate-y-4 opacity-0 transition-all duration-300 ease-in-out w-[calc(60%-20px)] md:w-[calc(16%-20px)]"
     >
       <ul class="space-y-1 sm:space-y-2">
         <li>
           <a
-            href="#home-section"
+            href="index.html#home-section"
             class="menu-link text-black hover:text-black transition-colors relative block py-1 text-sm sm:text-base font-medium"
             >Home</a
           >
         </li>
         <li>
           <a
-            href="#about-us-section"
+            href="index.html#about-us-section"
             class="menu-link text-black hover:text-black transition-colors relative block py-1 text-sm sm:text-base font-medium"
             >About</a
           >
         </li>
         <li>
           <a
-            href="#contact-us-section"
+            href="index.html#contact-us-section"
             class="menu-link text-black hover:text-black transition-colors relative block py-1 text-sm sm:text-base font-medium"
             >Contact Us</a
           >
@@ -167,372 +169,94 @@
     </nav>
 
     <!-- Main Content Area -->
+    <!-- Main Content Area -->
     <main>
-      <div class="relative h-screen m-2 sm:m-3 md:m-4" id="home-section">
-        <!-- Video Background -->
-        <div
-          class="video-docker absolute top-0 left-0 w-full h-full rounded-[8px] sm:rounded-[10px] overflow-hidden"
-        >
-          <video
-            class="min-w-full min-h-full absolute object-cover"
-            src="images/hero1.mp4"
-            type="video/mp4"
-            autoplay
-            muted
-            loop
-          ></video>
-        </div>
-
-        <!-- Main Content -->
-        <div
-          class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8"
-        >
-          <div
-            class="space-y-3 sm:space-y-4 md:space-y-6 max-w-xs sm:max-w-2xl md:max-w-4xl"
-          >
-            <h1
-              class="md:text-[70px] text-[28px] font-bold md:leading-[90px] mb-0"
-            >
-              Invest With <span class="text-light-green">Clarity.</span>
-            </h1>
-            <h1 class="md:text-[70px] text-[26px] font-bold md:leading-[90px]">
-              <span class="text-light-green">Trade</span> With Confidence.
-            </h1>
-            <!-- <h1 class="hero-main-text">Invest In Your Future.</h1> -->
-
-            <p
-              class="hero-sub-text text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light max-w-xs sm:max-w-xl md:max-w-2xl mx-auto"
-            >
-              Empowering Every Investor In Bangladesh's Capital Market
-            </p>
-
-            <!-- Call to Action Buttons -->
-            <div
-              class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4 sm:pt-6 md:pt-8"
-            >
-              <button
-                class="bg-light-green text-black px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-[8px] sm:rounded-[10px] font-semibold text-sm sm:text-base md:text-lg hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer w-full sm:w-auto justify-center"
-              >
-              <!-- http://192.168.10.37:5173/  https://client.fintra.com.bd/login -->
-                <a
-                  href="https://client.fintra.com.bd/login"
-                  class="login-link secondary flex items-center justify-center w-full space-x-2"
-                  ><span class="login-text">Login</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="11"
-                    viewBox="0 0 14 13"
-                    fill="none"
-                    class="sm:w-[14px] sm:h-[13px]"
-                  >
-                    <path
-                      d="M2 11.5L12 1.5M12 1.5H3M12 1.5V10.5"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="sm:stroke-[2.5]"
-                    /></svg
-                ></a>
-              </button>
-              <a
-                class="bg-white/10 text-white px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-[8px] sm:rounded-[10px] font-semibold text-sm sm:text-base md:text-lg hover:bg-opacity-80 transition-all border border-gray-600 shadow-lg cursor-pointer w-full sm:w-auto"
-               href='#about-us-section'"
-              >
-                About Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- About Us Section -->
-      <div class="my-20" id="about-us-section">
+      <!-- Privacy Policy Section -->
+      <div class="my-20 min-h-screen pt-24" id="privacy-policy-section">
         <div
           class="relative w-[calc(95%-20px)] sm:w-[calc(90%-30px)] md:w-[calc(90%-40px)] mx-auto"
         >
-          <div
-            class="flex flex-col md:flex-row md:items-center md: justify-between"
-          >
-            <!-- certificate content -->
-
-            <!-- max-w-[435px] max-h-[485px] max-w-[calc(100vw-40%)] max-h-[calc(100vh-60%)]-->
-            <div class="w-full max-w-[435px] max-h-[485px] mb-10 md:mb-0">
-              <div class="relative rounded-xl overflow-hidden">
-                <!-- Main Image -->
-                <img
-                  src="images/aboutus.png"
-                  alt="About Us Image"
-                  class="object-cover object-center w-full h-auto max-h-[485px] rounded-xl"
-                />
-
-                <!-- Top Left Text -->
-                <div class="absolute top-3 md:left-3 text-white w-full">
-                  <p class="font-semibold ml-2 md:ml-0">TREC #084</p>
-                  <p class="text-[16px] leading-[24px] font-light ml-2 md:ml-0">
-                    Issued on 16th Nov 2021
-                  </p>
-                  <p class="text-[10px] leading-[15px] font-light ml-2 md:ml-0">
-                    By Dhaka Stock Exchange
-                  </p>
-                  <button
-                    id="view-certificate-btn"
-                    class="bg-white/35 text-white px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg cursor-pointer md:w-[350px] w-[320px] mx-auto justify-center mt-5"
-                  >
-                    <span class="text-sm sm:text-base md:text-lg font-semibold"
-                      >View Certificate</span
-                    >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="11"
-                      viewBox="0 0 14 13"
-                      fill="none"
-                      class="sm:w-[14px] sm:h-[13px]"
-                    >
-                      <path
-                        d="M2 11.5L12 1.5M12 1.5H3M12 1.5V10.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="sm:stroke-[2.5]"
-                      />
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Rotating Circle Text (half visible) -->
-                <div
-                  class="absolute bottom-[-150px] md:bottom-[-200px] left-1/2 -translate-x-1/2 text-white"
-                >
-                  <div class="animate-spin-slow">
-                    <svg
-                      viewBox="0 0 100 100"
-                      class="w-[300px] h-[300px] md:w-[400px] md:h-[400px]"
-                    >
-                      <path
-                        id="curve"
-                        d="M 50 50 m -37 0 a 37 37 0 1 1 74 0 a 37 37 0 1 1 -74 0"
-                        fill="transparent"
-                      />
-                      <text class="text-[8px] font-[800] fill-[#FAFCFF]">
-                        <textPath xlink:href="#curve">
-                          Certified TREC Certified TREC Certified TREC Certified
-                          TREC
-                        </textPath>
-                      </text>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mx-10"></div>
-            <div class="w-full">
+          <div class="mx-auto">
+            <!-- Header -->
+            <div class="mb-8">
               <button
                 class="bg-light-teal/10 text-light-green px-6 py-2 sm:px-8 sm:py-2.5 md:px-10 md:py-3 rounded-full hover:bg-opacity-90 transition-all flex items-center space-x-2 shadow-lg w-auto justify-center mb-5"
               >
-                About Us
+                FINTRA. Securities Limited – Privacy Policy
               </button>
-              <h2 class="contact-us-section-title mb-3 md:mb-6 mt-10 md:mt-0">
-                Your Assurance of Excellence
-              </h2>
-              <p class="hero-sub-text mb-6 md:mb-10">
-                FINTRA. Securities Limited ("FINTRA.") has been operating as an
-                intermediary in Bangladesh's capital market to cater the demand
-                set out by institutions, high net worth clients, and individuals
-                since 2019. As a member of the Dhaka Stock Exchange Limited
-                (TREC No. 084), authorized by the Bangladesh Securities and
-                Exchange Commission (BSEC), FINTRA. offers a wide range of
-                brokerage services and investing solutions to enhance investor
-                confidence and trust in the Bangladeshi capital market. FINTRA.
-                is comprised of dedicated and committed knowledgeable experts
-                who ensure that stakeholders receive the highest level of
-                brokerage services possible. The company strives to offer its
-                services at a competitive rate to all clients while binding
-                trust and creating value for everyone involved through its
-                services.
-              </p>
-              <p class="hero-sub-text mb-6 md:mb-10 mt-5">
-                At FINTRA Securities, our TREC certification reinforces our
-                position as a leading brokerage firm in Bangladesh, committed to
-                democratizing access to capital markets. We take pride in being
-                your trusted partner in navigating the complexities of stock
-                trading while prioritizing your financial success.
-              </p>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Contact Us Section -->
-      <div class="my-20" id="contact-us-section">
-        <div
-          class="relative w-[calc(95%-20px)] sm:w-[calc(90%-30px)] md:w-[calc(90%-40px)] mx-auto"
-        >
-          <!-- Gradient border -->
-          <div class="gradient-border rounded-[10px]">
+
             <!-- Content -->
-            <div class="bg-[#c3fe84]/10 rounded-[8px] p-6 sm:p-8 lg:p-12">
-              <div class="flex flex-col md:flex-row gap-8 lg:gap-12">
-                <!-- Left Column - Contact Us -->
-                <div class="flex-1 z-40">
-                  <h2 class="contact-us-section-title mb-3 md:mb-6">
-                    Contact Us
-                  </h2>
-                  <p class="hero-sub-text mb-6 md:mb-10 md:w-3/5">
-                    Empowering Investors, Building Futures. Your trusted partner
-                    in navigating Bangladesh's capital markets with ease and
-                    confidence.
-                  </p>
-                  <button
-                    id="phone-copy-btn"
-                    class="bg-white text-black px-4 py-3 sm:px-6 sm:py-4 rounded-[8px] font-semibold text-sm sm:text-base flex items-center gap-2 hover:bg-opacity-90 transition-all font-general-sans relative cursor-pointer"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59531 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.89391 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span class="normal-text select-text" id="phone-number"
-                      >+8809606 268866</span
-                    >
-                  </button>
-                </div>
+            <div class="space-y-6 md:space-y-8">
+              <!-- Introduction -->
+              <div>
+                <h2 class="normal-text mb-3 text-light-green">
+                  1. Introduction
+                </h2>
+                <p class="hero-sub-text text-gray-300">
+                  <span class="font-bold">FINTRA Securities Limited</span>
+                  (“FINTRA,” “we,” “us,” or “our”) is a Bangladesh-based fintech
+                  and brokerage firm licensed by the Bangladesh Securities and
+                  Exchange Commission (BSEC). We offer digital trading
+                  platforms, investment research services, and margin loan
+                  products to our clients. We are committed to protecting your
+                  privacy and personal information. This Privacy Policy explains
+                  how we collect, use, store, and disclose your personal data
+                  when you use FINTRA’s websites, mobile applications, and
+                  services.
+                  <br />
+                  Please read this Privacy Policy carefully. By creating an
+                  account with FINTRA or otherwise using our services, you
+                  acknowledge that you have read and understood this Policy and
+                  agree to the collection and use of your information as
+                  described herein. If you do not agree with any part of this
+                  Policy, you should refrain from using our services.
+                </p>
+              </div>
+              
 
-                <!-- Right Column - Office Locations -->
-                <div class="flex-1 z-40">
-                  <!-- Head Office -->
-                  <div class="mb-6 sm:mb-8 border-l-2 border-light-green pl-4">
-                    <h3 class="normal-text mb-2">Head Office</h3>
-                    <p class="hero-sub-text mb-4">
-                      Cotton House, Level 01, House No. 02, Road No. 113/A,
-                      Gulshan-2. Bangladesh.
-                    </p>
-                    <div
-                      class="flex flex-col md:flex-row md:items-center md:justify- my-auto"
-                    >
-                      <div class="flex items-center gap-2">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59531 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.89391 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z"
-                            stroke="white"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        <span class="normal-text">Call - 01701227322</span>
-                      </div>
-                      <a
-                        href="https://maps.google.com/maps?q=Cotton+House,+Level+01,+House+No.+02,+Road+No.+113/A,+Gulshan-2,+Dhaka,+Bangladesh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex items-center gap-2 md:ml-5 cursor-pointer hover:text-light-green transition-colors"
-                      >
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        <span class="normal-text">View Map</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  <!-- Motijheel Branch -->
-                  <div class="border-l-2 border-light-green pl-4">
-                    <h3 class="normal-text mb-2">Motijheel Branch</h3>
-                    <p class="hero-sub-text mb-4">
-                      9-E Motijheel C/A, 2nd Floor (North Side), Dhaka - 1000,
-                      Bangladesh.
-                    </p>
-                    <div
-                      class="flex flex-col md:flex-row md:items-center md:justify- my-auto"
-                    >
-                      <div class="flex items-center gap-2">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59531 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.89391 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z"
-                            stroke="white"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        <span class="normal-text">Call - 01313098506</span>
-                      </div>
-                      <a
-                        href="https://www.google.com/maps/place/Motijheel+C%2FA,/@23.7276784,90.4212624,21z/data=!4m10!1m2!2m1!1sMotijheel+C%2FA,,+4Th)+Floor,+Yousuf+Manson,+48%2F1!3m6!1s0x3755b9dd5c185191:0x49c983903e7b1553!8m2!3d23.7276784!4d90.4215601!15sCi9Nb3RpamhlZWwgQy9BLCwgNFRoKSBGbG9vciwgWW91c3VmIE1hbnNvbiwgNDgvMZIBDXRyYXZlbF9hZ2VuY3mqAYUBCgovbS8wMnBoZ2pqEAEqJCIgYyBhIDR0aCBmbG9vciB5b3VzdWYgbWFuc29uIDQ4IDEoADIfEAEiG9dLLx4OYEt50SBDYAW2Z8VJU117S-efUVayAzIuEAIiKm1vdGlqaGVlbCBjIGEgNHRoIGZsb29yIHlvdXN1ZiBtYW5zb24gNDggMeABAA!16s%2Fg%2F11l1jrfm6x?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex items-center gap-2 md:ml-5 cursor-pointer hover:text-light-green transition-colors"
-                      >
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        <span class="normal-text">View Map</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+              <!-- Information We Collect -->
+              <div>
+                <h2 class="normal-text mb-3 text-light-green">
+                  3. Information We Collect
+                </h2>
+                <p class="hero-sub-text text-gray-300 mb-3">
+                  To provide our services and comply with regulatory
+                  requirements, FINTRA collects various categories of personal
+                  and financial information. The types of information we collect
+                  include:
+                </p>
+                <ul
+                  class="list-disc list-inside space-y-2 hero-sub-text text-gray-300 ml-4"
+                >
+                  <li>
+                    Personal Identification Information: Your full name, date of
+                    birth, national identification number (such as National ID
+                    or passport details), photographs (for identity
+                    verification), and other KYC details like parents’ names,
+                    marital status, and nationality as required by account
+                    opening regulations.
+                  </li>
+                  <li>
+                    <strong class="text-white">Financial Information:</strong>
+                    Bank account details, transaction history, investment
+                    preferences, and trading activities
+                  </li>
+                  <li>
+                    <strong class="text-white">Technical Data:</strong> IP
+                    address, browser type, device information, and usage data
+                    when you visit our website
+                  </li>
+                  <li>
+                    <strong class="text-white">Communication Data:</strong>
+                    Records of correspondence, including emails, phone calls,
+                    and chat interactions
+                  </li>
+                </ul>
+                <p class="hero-sub-text text-gray-300 mb-3">
+                  We may collect and process the following types of personal
+                  information
+                </p>
               </div>
             </div>
           </div>
@@ -555,14 +279,19 @@
             <a href="#about-us-section" class="cursor-pointer">About</a>
             <a href="#contact-us-section" class="cursor-pointer">Contact</a>
             <!-- <a href="" id="license-menu-link">License</a> -->
-            <a href="privacy-policy.html" class="cursor-pointer">Privacy Policy</a>
+            <a href="privacy-policy.html" class="cursor-pointer"
+              >Privacy Policy</a
+            >
 
-            <a href="terms-condition.html" class="cursor-pointer">Terms & Conditions</a>
+            <a href="terms-condition.html" class="cursor-pointer"
+              >Terms & Conditions</a
+            >
           </div>
         </div>
       </div>
     </main>
 
+    <!-- Footer -->
     <!-- Certificate Modal -->
     <div
       id="certificate-modal"
@@ -958,29 +687,35 @@
     </script>
     <!-- Zoho Chat -->
     <!-- <div id="zoho-chat-container"> -->
-    <script>window.$zoho=window.$zoho || {};
-      $zoho.salesiq=$zoho.salesiq||{
-      ready: function() {
-        // Wait a bit for the widget to be injected into the DOM
-        const repositionWidget = () => {
-          const widget = document.querySelector("#zsiq_float"); // Zoho's default ID
-          if (widget) {
-            // Apply your custom position
-            widget.style.bottom = "35px";
-            widget.style.right = "40px";
-            <!-- widget.style.left = "auto"; // reset left if it’s set -->
-            widget.style.position = "fixed";
-            widget.style.zIndex = "999999";
-          } else {
-            // Try again if widget isn't ready yet
-            setTimeout(repositionWidget, 500);
-          }
-        };
-        repositionWidget();
-      },
-    };</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq88face176e0b2bdb5853c10ccc344dd08a6bcae888a23c3af12ed7c4baadacd5" defer></script>
+    <script>
+      window.$zoho = window.$zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        ready: function () {
+          // Wait a bit for the widget to be injected into the DOM
+          const repositionWidget = () => {
+            const widget = document.querySelector("#zsiq_float"); // Zoho's default ID
+            if (widget) {
+              // Apply your custom position
+              widget.style.bottom = "35px";
+              widget.style.right = "40px";
+              <!-- widget.style.left = "auto"; // reset left if it’s set -->
+              widget.style.position = "fixed";
+              widget.style.zIndex = "999999";
+            } else {
+              // Try again if widget isn't ready yet
+              setTimeout(repositionWidget, 500);
+            }
+          };
+          repositionWidget();
+        },
+      };
+    </script>
+    <script
+      id="zsiqscript"
+      src="https://salesiq.zohopublic.com/widget?wc=siq88face176e0b2bdb5853c10ccc344dd08a6bcae888a23c3af12ed7c4baadacd5"
+      defer
+    ></script>
     <!-- </div> -->
-
   </body>
   <!-- redirection from landing page to dashboard script -->
   <script>
