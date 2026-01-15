@@ -616,6 +616,14 @@
                 alt="Certificate"
                 class="absolute top-0 left-0 w-full h-auto max-h-full object-contain transition-all duration-500 opacity-0 transform scale-95"
               />
+
+              <!-- Certificate 3 (Hidden by default) -->
+              <img
+                id="certificate-3"
+                src="images/duns.png"
+                alt="Certificate"
+                class="absolute top-0 left-0 w-full h-auto max-h-full object-contain transition-all duration-500 opacity-0 transform scale-95"
+              />
             </div>
           </div>
 
@@ -641,6 +649,16 @@
               >
                 <img
                   src="images/crt.png"
+                  alt="Certificate"
+                  class="w-auto h-32 object-cover"
+                />
+              </div>
+              <div
+                id="thumb-3"
+                class="md:certificate-thumbnail cursor-pointer border-0 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-gray-300"
+              >
+                <img
+                  src="images/duns.png"
                   alt="Certificate"
                   class="w-auto h-32 object-cover"
                 />
@@ -783,8 +801,10 @@
       const closeModal = document.getElementById("close-modal");
       const certificate1 = document.getElementById("certificate-1");
       const certificate2 = document.getElementById("certificate-2");
+      const certificate3 = document.getElementById("certificate-3");
       const thumb1 = document.getElementById("thumb-1");
       const thumb2 = document.getElementById("thumb-2");
+      const thumb3 = document.getElementById("thumb-3");
 
       let currentCertificate = 1;
 
@@ -795,6 +815,9 @@
         certificateModal.querySelector("div").classList.remove("scale-95");
         certificateModal.querySelector("div").classList.add("scale-100");
         document.body.style.overflow = "hidden";
+
+        // Reset to certificate 1 by default
+        showCertificate(1);
 
         // Close dropdown menu if open
         if (isMenuOpen) {
@@ -855,6 +878,8 @@
           certificate1.classList.add("opacity-100", "scale-100");
           certificate2.classList.remove("opacity-100", "scale-100");
           certificate2.classList.add("opacity-0", "scale-95");
+          certificate3.classList.remove("opacity-100", "scale-100");
+          certificate3.classList.add("opacity-0", "scale-95");
 
           // Update thumbnails
           thumb1.classList.remove("border-gray-200");
@@ -866,12 +891,19 @@
           thumb2.classList.add("border-gray-200");
           thumb2.querySelector("div").classList.remove("bg-blue-50");
           thumb2.querySelector("div").classList.add("bg-gray-50");
-        } else {
+
+          thumb3.classList.remove("border-blue-500");
+          thumb3.classList.add("border-gray-200");
+          thumb3.querySelector("div").classList.remove("bg-blue-50");
+          thumb3.querySelector("div").classList.add("bg-gray-50");
+        } else if (certNumber === 2) {
           // Show certificate 2
           certificate1.classList.remove("opacity-100", "scale-100");
           certificate1.classList.add("opacity-0", "scale-95");
           certificate2.classList.remove("opacity-0", "scale-95");
           certificate2.classList.add("opacity-100", "scale-100");
+          certificate3.classList.remove("opacity-100", "scale-100");
+          certificate3.classList.add("opacity-0", "scale-95");
 
           // Update thumbnails
           thumb2.classList.remove("border-gray-200");
@@ -883,6 +915,35 @@
           thumb1.classList.add("border-gray-200");
           thumb1.querySelector("div").classList.remove("bg-blue-50");
           thumb1.querySelector("div").classList.add("bg-gray-50");
+
+          thumb3.classList.remove("border-blue-500");
+          thumb3.classList.add("border-gray-200");
+          thumb3.querySelector("div").classList.remove("bg-blue-50");
+          thumb3.querySelector("div").classList.add("bg-gray-50");
+        } else if (certNumber === 3) {
+          // Show certificate 3
+          certificate1.classList.remove("opacity-100", "scale-100");
+          certificate1.classList.add("opacity-0", "scale-95");
+          certificate2.classList.remove("opacity-100", "scale-100");
+          certificate2.classList.add("opacity-0", "scale-95");
+          certificate3.classList.remove("opacity-0", "scale-95");
+          certificate3.classList.add("opacity-100", "scale-100");
+
+          // Update thumbnails
+          thumb3.classList.remove("border-gray-200");
+          thumb3.classList.add("border-blue-500");
+          thumb3.querySelector("div").classList.remove("bg-gray-50");
+          thumb3.querySelector("div").classList.add("bg-blue-50");
+
+          thumb1.classList.remove("border-blue-500");
+          thumb1.classList.add("border-gray-200");
+          thumb1.querySelector("div").classList.remove("bg-blue-50");
+          thumb1.querySelector("div").classList.add("bg-gray-50");
+
+          thumb2.classList.remove("border-blue-500");
+          thumb2.classList.add("border-gray-200");
+          thumb2.querySelector("div").classList.remove("bg-blue-50");
+          thumb2.querySelector("div").classList.add("bg-gray-50");
         }
         currentCertificate = certNumber;
       }
@@ -890,6 +951,7 @@
       // Thumbnail click events
       thumb1.addEventListener("click", () => showCertificate(1));
       thumb2.addEventListener("click", () => showCertificate(2));
+      thumb3.addEventListener("click", () => showCertificate(3));
 
       // Section-specific scroll position configuration
       const sectionScrollPositions = {

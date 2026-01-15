@@ -485,3 +485,7 @@ button:hover {
     top: 4rem !important;
   }
 }
+
+.font-italic {
+  font-style: italic;
+}
